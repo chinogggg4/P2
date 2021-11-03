@@ -1,0 +1,301 @@
+def introduccion():
+  menu1()
+  opcion = input()
+  print("\n")
+  rep = menu2(opcion)
+  if rep:
+    opcion2 = int(input())
+    print("\n")
+    if opcion2 == 0:
+      introduccion()
+    elif opcion2 < 43 and opcion2 > 0:
+      variables.append(opcion2)
+      parte3()
+    else:
+      print("Opción inválida. Por favor, introduce una opción válida \n")
+      introduccion()
+  else:
+    introduccion()
+
+def menu1():
+  print("   a) Problema con el alimento")
+  print("   b) Problema con tu vehículo")
+  print("   c) Problema con el restaurante")
+  print("   d) Problema con el cliente")
+  print("   e) Problema con la aplicación")
+  print("   f) Problema con la autoridad de vialidad")
+  print("   g) Otro \n")
+
+def menu2(opc):
+  if opc == 'a' or opc == 'A':
+    print("   Selecciona con un número, la situación que describe tu problema \n")
+    print("     1) El restaurante, no te entregó completo el pedido")
+    print("     2) Se derramó algún líquido, maltratando la envoltura del pedido")
+    print("     3) Los alimentos fueron robados")
+    print("     4) Los alimentos llegaron dañados por el transcurso del viaje")
+    print("     5) Se te cayó algún artículo durante el recorrido")
+    print("     6) Los alimentos no fueron empaquetados debidamente por el restaurante")
+    print("     7) El sello se rompió o se despegó")
+    print("     0) Si tu problema no es ninguno de estos, prueba en otra categoría. (Regresar al menú principal) \n")
+    return True
+  elif opc == 'b' or opc == 'B':
+    print("   Selecciona con un número, la situación que describe tu problema \n")
+    print("     8) Se te ponchó tu llanta")
+    print("     9) La moto sufrió un daño que imposibilita la entrega")
+    print("     10) La moto tiene un problema, sin embargo, es momentáneo o se puede arreglar en menos de diez minutos")
+    print("     11) Sufriste un accidente y necesitas atención médica urgente")
+    print("     12) Tuviste un choque no grave, pero tienes que esperar para resolverlo")
+    print("     13) Tu motocicleta fue robada completamente o parcialmente")
+    print("     14) La grúa se llevó tu motocicleta")
+    print("     0) Si tu problema no es ninguno de estos, prueba en otra categoría. (Regresar al menú principal) \n")
+    return True
+  elif opc == 'c' or opc == 'C':
+    print("   Selecciona con un número, la situación que describe tu problema \n")
+    print("     15) El restaurante, no te entregó completo el pedido")
+    print("     16) El restaurante está tardando demasiado tiempo en entregarte tu pedido")
+    print("     17) Los cocinerons no utilizan las medidas de higiene adecuadas")
+    print("     18) El restaurante te exige un pago por el pedido")
+    print("     19) Los artículos son demasiado grandes que no caben en la mochila")
+    print("     20) Los empleados comieron parcialmente los alimentos")
+    print("     21) No encuentras el restaurante")
+    print("     0) Si tu problema no es ninguno de estos, prueba en otra categoría. (Regresar al menú principal) \n")
+    return True
+  elif opc == 'd' or opc == 'D':
+    print("   Selecciona con un número, la situación que describe tu problema \n")
+    print("     22) No encuentras al cliente")
+    print("     23) El cliente no pagó el pedido")
+    print("     24) El cliente no respeta las indicaciones sanitarias")
+    print("     25) El cliente habla otro idioma")
+    print("     26) El cliente no acepta el pedido porque viene dañado o comido")
+    print("     27) El cliente quiere cambiar el método de pago")
+    print("     28) No tienes cambio para el cliente")
+    print("     0) Si tu problema no es ninguno de estos, prueba en otra categoría. (Regresar al menú principal) \n")
+    return True
+  elif opc == 'e' or opc == 'E':
+    print("   Selecciona con un número, la situación que describe tu problema \n")
+    print("     29) Se te descargó el celular")
+    print("     30) La aplicación se trabó")
+    print("     31) No se actualizan mis ganancias")
+    print("     32) No carga la ruta de viaje")
+    print("     33) Cancelar pedido")
+    print("     34) El celular se descompuso")
+    print("     35) La aplicación no recibe pedidos")
+    print("     0) Si tu problema no es ninguno de estos, prueba en otra categoría. (Regresar al menú principal) \n")
+    return True
+  elif opc == 'f' or opc == 'F':
+    print("   Selecciona con un número, la situación que describe tu problema \n")
+    print("     36) Te detuvo un oficial de vialidad por una infracción")
+    print("     37) Se quieren llevar tu moto")
+    print("     38) El oficial insinúa que le des un soborno")
+    print("     39) Te pasaste un alto")
+    print("     40) Chocaste")
+    print("     41) No tienes seguro")
+    print("     42) Te chocaron y necesitas ayuda médica")
+    print("     0) Si tu problema no es ninguno de estos, prueba en otra categoría. (Regresar al menú principal) \n")
+    return True
+  elif opc == 'g' or opc == 'G':
+    print("\n Te pondremos en contacto con un agente para que resivas una mejor asesoría. Gracias \n ")
+    return False
+  else:
+    print("Opción inválida. Por favor, introduce una una letra válida. \n")
+    return False
+
+def parte3():
+  print("a) ¿Quieres agregar otro problema a tu situación?")
+  print("b) ¿Quieres borrar la selección anterior?")
+  print("c) ¿Quieres pasar a la parte donde te doy un diagnóstico? \n")
+
+  opcion3 = input()
+  print("\n")
+  if opcion3 == 'a' or opcion3 == 'A':
+    introduccion()
+  elif opcion3 == 'b' or opcion3 == 'B': 
+    print("Se ha borrado la opción" , variables.pop())
+    print(" ")
+    parte3()
+  elif opcion3 == 'c' or opcion3 == 'C': 
+    print("Diagnóstico: \n")
+  else:
+    print("Opción inválida. Por favor, introduce una una letra válida. \n")
+    parte3()
+
+def motor_de_inferencia():
+  for i in variables:
+    if i == 1:
+      selecion.append(0)
+    elif i == 2:
+      selecion.append(1)
+    elif i == 3:
+      selecion.append(2)  
+    elif i == 4:
+      selecion.append(1)
+    elif i == 5:
+      selecion.append(2)
+    elif i == 6:
+      selecion.append(3)
+    elif i == 7:
+      selecion.append(4)
+    elif i == 8:
+      selecion.append(5)
+      selecion.append(6)
+    elif i == 9:
+      selecion.append(2)
+      selecion.append(6)
+    elif i == 10:
+      selecion.append(7)
+    elif i == 11:
+      selecion.append(8)
+      selecion.append(2)
+    elif i == 12:
+      selecion.append(7)
+      selecion.append(9)
+    elif i == 13:
+      selecion.append(10)
+      selecion.append(5)
+      selecion.append(11)
+    elif i == 14:
+      selecion.append(10)
+      selecion.append(5)
+    elif i == 15:
+      selecion.append(0)
+    elif i == 16:
+      selecion.append(12)
+      selecion.append(13)
+    elif i == 17:
+      selecion.append(14)
+      selecion.append(15)
+      selecion.append(16)
+      selecion.append(13)
+    elif i == 18:
+      selecion.append(17)
+      selecion.append(14)
+    elif i == 19:
+      selecion.append(18)
+    elif i == 20:
+      selecion.append(14)
+      selecion.append(19)
+      selecion.append(7)
+    elif i == 21:
+      selecion.append(20)
+    elif i == 22:
+      selecion.append(7)
+      selecion.append(21)
+      selecion.append(22)
+      selecion.append(23)
+      selecion.append(13)
+    elif i == 23:
+      selecion.append(23)
+      selecion.append(13)
+    elif i == 24:
+      selecion.append(24)
+    elif i == 25:
+      selecion.append(25) 
+      selecion.append(26)
+    elif i == 26:
+      selecion.append(27)
+    elif i == 27:
+      selecion.append(28)
+    elif i == 28:
+      selecion.append(30)
+      selecion.append(31)
+      selecion.append(32)
+    elif i == 29:
+      selecion.append(7)
+      selecion.append(27)
+    elif i == 30:
+      selecion.append(33)
+    elif i == 31:
+      selecion.append(34)
+      selecion.append(35)
+    elif i == 32:
+      selecion.append(36)
+      selecion.append(33)
+      selecion.append(35)
+    elif i == 33:
+      selecion.append(37)
+      selecion.append(13)
+      selecion.append(38)
+      selecion.append(32)
+    elif i == 34:
+      selecion.append(7)
+      selecion.append(5)
+    elif i == 35:
+      selecion.append(36)
+      selecion.append(33)
+      selecion.append(35)
+    elif i == 36:
+      selecion.append(5)
+    elif i == 37:
+      selecion.append(39)
+    elif i == 38:
+      selecion.append(42)
+      selecion.append(11)
+    elif i == 39:
+      selecion.append(41)
+    elif i == 40:
+      selecion.append(10)
+      selecion.append(5)
+    elif i == 41:
+      selecion.append(39)
+    elif i == 42:
+      selecion.append(10)
+      selecion.append(8)
+
+def motor_explicativo():
+  print("Agradecemos por haberte puesto en contacto con nosotros.")
+  print(" ")
+  for i in selecion:
+    print(oraciones[i])
+  print("¡Gracias por tu consulta! ¡Hasta luego! ")
+
+variables = []
+oraciones = ("Si te encuentras en el restaurante o cerca de él, pídeles los artículos que hicieron falta. O si ya estás con el cliente, pídele que los reclame en su aplicación para que le reembolcen los artículos faltantes.",
+"Si el cliente quiere recibir en ese estado el pedido, no hay problema, por el contrario te podrás quedar con el alimento, sin embargo se te cobrará el pedido.",
+"¡Lamentamos que te haya pasado esto! Le avisaremos al cliente y lamentablemente se te cobrará el pedido.",
+"Si te encuentras en el restaurante, pídeles que te empaquen bien los alimentos. Si te encuentras en el transcurso o con el cliente y se te tiró algún artículo, le llamaremos la atención al restaurante. El cliente podrá recibir o no el pedido. En el caso de que no lo reciba, informarle que se le reembolsará los artículos dañados, solamente que los específique en la aplicación.",
+"Si te encuentras en el restaurante, pídeles que te vualvan a sellar el pedido. Si te encuentras con el cliente, pídele que revice el pedido, si no está conforme y te regresa el pedido, se te cobrará el mismo.",
+"Si te es posible entregar el pedido, entrégalo por cualquier medio, avisandóle al cliente, de lo contrario se te cobrará el pedido.",
+"Si no puedes arreglar el problema, te enviaremos un mécanico competente.",
+"No te preocupes, se le avisará al cliente.",
+"Se ha llamado a una ambulancia a tu ubicación. Llegará pronto.",
+"Si tardas en entregar el pedido, se cancelará y se te descontará de tus ganancias.",
+"¡Lamentamos lo sucedido!",
+"Te recomendamos que lo reportes ante las autoridades.",
+"Puedes esperar a que te lo entreguen o puedes cancelarlo.",
+"No se te cobrará el pedido.",
+"Se le llamará la atención al restaurante.",
+"Si te encuentras con el cliente, pídele que revice el pedido.",
+"Si no recive el pedido, puedes quedártelo.",
+"No debes pagar al restaurante, solo debes recoger el pedido.",
+"Pídele al restaurante que empaquen la comida en embases más pequeños.",
+"Pídele al restaurante que vuelva a hacer el pedido.",
+"Fíjate en la descripción del restaurante en tu app. Allí vienen las indicaciones para acceder al él.",
+"Espera diez minutos.", 
+"Si el pago es con tarjeta, deja el pedido en un lugar seguro.",
+"Si el pago es en efectivo, puedes quedarte con el pedido.",
+"Se le llamará la atención al cliente.",
+"Se pondrán en contacto con el cliente, personas calificadas.",
+"Entrega el pedido con normalidad.",
+"Puedes quedarte con el pedido, sin embargo se te cobrará el pedido.",
+"No es posible.",
+"Es tu deber llevar siempre cambio.",
+"Pídele al cliente que espere un poco para que puedas cambiar el dinero.",
+"Si el cliente no acepta, entrega el pedido. No le cobres al cliente.",
+"Pero se te cobrará a ti el pedido.",
+"Cierra la aplicación y vuélvela a abrir.",
+"Las ganancias tardan en acutualizarse hasta 5 horas. Ten paciencia.",
+"Si no se resuelve el problema, llama a Soporte.",
+"Verifica que tengas datos móviles, que estén encendidos, así como tu ubicación",
+"Si todavía no has recibido los alimentos puedes cancelarlo.",
+"Si ya recibiste el pedido, y cancelas, puedes quedarte con los alimentos",
+"Debes tener siempre tu tarjeta de circulación, licencia y seguro. Recuerda si no tienes nada de esto, ellos pueden llevarse tu moto.",
+"¿Necesitas atención médica?",
+"Evita cometer infracciones. Respetar los semáforos y señales viales siempre te darán una mayor posibilidad de no tener accidentes.",
+"Pedir y aceptar un soborno es ilegal.")
+
+selecion = []
+print("¡Hola! ¿Qué tal? Soy tu asistente para repartidores de Uber Eats. ¿En qué te puedo ayudar? \n")
+introduccion()
+
+motor_de_inferencia()
+motor_explicativo()
